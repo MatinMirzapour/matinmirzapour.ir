@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>محمد متین میرزاپور | خدمات دیجیتال، گیم و فروشگاه اشتراک‌ها</title>
+
+  <!-- SEO -->
+  <meta name="description" content="وب‌سایت رسمی محمد متین میرزاپور؛ ارائه‌دهنده خدمات دیجیتال، اشتراک‌های پلی‌استیشن، تلگرام پرمیوم، نتفلیکس، اسپاتیفای، دیسکورد و سرویس‌های حرفه‌ای شبکه‌های اجتماعی." />
+  <link rel="canonical" href="https://matinmirzapour.ir" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="محمد متین میرزاپور | خدمات دیجیتال و گیم" />
+  <meta property="og:description" content="برند شخصی محمد متین میرزاپور؛ فروش و فعال‌سازی اشتراک‌های دیجیتال، خدمات شبکه‌های اجتماعی و سرویس‌های مخصوص گیمرها." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://matinmirzapour.ir" />
+  <!-- <meta property="og:image" content="https://matinmirzapour.ir/your-preview-image.jpg" /> -->
+
+  <!-- Favicon (بعداً اضافه کن) -->
+  <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #020617 0, #020617 55%, #020617 100%);
+      color: #e5e7eb;
+      line-height: 1.9;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* انیمیشن fade-in */
+    .fade {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hover-lift {
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+      border-color: #4b5563;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(3, 7, 18, 0.96);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid #111827;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      gap: 10px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .logo span {
+      color: #a855f7;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav li a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #9ca3af;
+      transition: 0.2s;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    nav li a:hover,
+    nav li a.active {
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: #f9fafb;
+    }
+
+    /* دکمه منوی موبایل */
+    .nav-toggle {
+      display: none;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-toggle span {
+      display: inline-block;
+    }
+
+    .nav-toggle-icon {
+      width: 14px;
+      height: 2px;
+      background: #e5e7eb;
+      position: relative;
+      border-radius: 999px;
+    }
+
+    .nav-toggle-icon::before,
+    .nav-toggle-icon::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      right: 0;
+    }
+
+    .nav-toggle-icon::before {
+      top: -4px;
+    }
+
+    .nav-toggle-icon::after {
+      top: 4px;
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        align-items: center;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 110%;
+        right: 0;
+        background: #020617;
+        border-radius: 14px;
+        border: 1px solid #111827;
+        padding: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 170px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
+        display: none;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+    }
+
+    main {
+      padding-bottom: 40px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 40px 0 32px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: #e5e7eb;
+      margin-bottom: 18px;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.18s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: #f9fafb;
+      box-shadow: 0 14px 35px rgba(88, 28, 135, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(59, 130, 246, 0.6);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #e5e7eb;
+      border-color: #4b5563;
+    }
+
+    .btn-ghost:hover {
+      background: #0b1120;
+      border-color: #818cf8;
+    }
+
+    .btn-small {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: #cbd5f5;
+    }
+
+    .hero-tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #4c1d95;
+      background: rgba(30, 64, 175, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #4c1d95, #020617 60%);
+      border-radius: 22px;
+      border: 1px solid #4b5563;
+      padding: 18px;
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.9);
+      font-size: 0.92rem;
+    }
+
+    .hero-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 999px;
+      background: conic-gradient(from 180deg, #6366f1, #a855f7, #f97316, #6366f1);
+      padding: 3px;
+      margin-bottom: 10px;
+    }
+
+    .hero-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .hero-card h2 {
+      font-size: 1.02rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      margin-bottom: 8px;
+      color: #e5e7eb;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      font-size: 0.82rem;
+      color: #d1fae5;
+    }
+
+    .hero-card-list li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    section {
+      padding: 30px 0;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      max-width: 700px;
+    }
+
+    /* Layout helpers */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, #020617, #020617);
+      border-radius: 16px;
+      padding: 14px 14px 16px 14px;
+      border: 1px solid #111827;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
+      font-size: 0.9rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .card-title span.icon {
+      font-size: 1.1rem;
+    }
+
+    .card-body {
+      color: #e5e7eb;
+    }
+
+    .info-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .info-list li {
+      margin-bottom: 6px;
+    }
+
+    .info-label {
+      color: #9ca3af;
+      font-size: 0.82rem;
+      display: inline-block;
+      min-width: 100px;
+    }
+
+    .muted {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+
+    /* Store */
+    .store-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .store-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .customer-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+    }
+
+    .customer-label {
+      color: #9ca3af;
+    }
+
+    .customer-btn {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: 0.15s;
+    }
+
+    .customer-btn.active,
+    .customer-btn:hover {
+      border-color: #22c55e;
+      background: #022c22;
+    }
+
+    .product-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .filter-btn {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: 0.15s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      border-color: #818cf8;
+      background: #111827;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .product-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .product-card {
+      background: radial-gradient(circle at top, #020617, #020617);
+      border-radius: 14px;
+      border: 1px solid #111827;
+      padding: 10px 10px 12px 10px;
+      font-size: 0.87rem;
+    }
+
+    .product-thumb {
+      height: 60px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      background: radial-gradient(circle at top, #1f2937, #020617);
+    }
+
+    .product-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+
+    .product-meta {
+      font-size: 0.8rem;
+      color: #d1d5db;
+      margin-bottom: 4px;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+    }
+
+    .product-price {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #a5b4fc;
+    }
+
+    .product-add {
+      font-size: 0.8rem;
+      border-radius: 999px;
+      padding: 5px 10px;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #e5e7eb;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .product-add:hover {
+      background: #111827;
+      border-color: #818cf8;
+    }
+
+    /* Cart */
+    .cart {
+      background: radial-gradient(circle at top, #020617, #020617);
+      border-radius: 16px;
+      border: 1px solid #111827;
+      padding: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+      font-size: 0.85rem;
+    }
+
+    .cart-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-items {
+      max-height: 220px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      padding-right: 4px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed #1f2937;
+      padding-bottom: 4px;
+    }
+
+    .cart-item-name {
+      font-size: 0.85rem;
+    }
+
+    .cart-item-controls {
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cart-btn {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 0.75rem;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .cart-summary {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      margin-bottom: 8px;
+    }
+
+    .cart-total {
+      font-weight: 600;
+      color: #22c55e;
+    }
+
+    .cart-subtotal {
+      color: #e5e7eb;
+    }
+
+    .cart-discount-line {
+      font-size: 0.8rem;
+      color: #f97316;
+    }
+
+    .cart-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    /* Auth */
+    .auth {
+      background: radial-gradient(circle at top left, #020617, #020617);
+      border-radius: 16px;
+      border: 1px solid #111827;
+      padding: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+      font-size: 0.9rem;
+    }
+
+    .auth-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .auth-tab {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      cursor: pointer;
+    }
+
+    .auth-tab.active {
+      border-color: #818cf8;
+      background: #111827;
+    }
+
+    .form-group {
+      margin-bottom: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 9px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      padding: 7px 9px;
+      font-size: 0.85rem;
+      outline: none;
+      transition: 0.14s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.5);
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: radial-gradient(circle at top, #020617, #020617);
+      border-radius: 16px;
+      border: 1px solid #111827;
+      padding: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+      font-size: 0.85rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 6px;
+    }
+
+    .contact-box strong {
+      color: #a5b4fc;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 0.8rem;
+    }
+
+    .social-pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+    }
+
+    .social-pill a {
+      color: #e5e7eb;
+    }
+
+    /* Section visibility */
+    [data-section] {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    [data-section].hidden {
+      display: none !important;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #111827;
+      padding: 16px 0 22px 0;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #6b7280;
+      background: #020617;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="logo" data-nav="home"><span>Matin</span> Mirzapour</div>
+
+      <button class="nav-toggle" type="button" id="nav-toggle">
+        <span>منو</span>
+        <span class="nav-toggle-icon"></span>
+      </button>
+
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#home" data-nav="home" class="active">خانه</a></li>
+          <li><a href="#store" data-nav="store">فروشگاه</a></li>
+          <li><a href="#about" data-nav="about">درباره</a></li>
+          <li><a href="#auth" data-nav="auth">ثبت‌نام / ورود</a></li>
+          <li><a href="#contact" data-nav="contact">ارتباط</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="hero" class="hero fade" data-section="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-kicker">برند شخصی محمد متین میرزاپور • matinmirzapour.ir</div>
+          <h1 class="hero-title">خدمات دیجیتال، گیم و فروشگاه تخصصی اشتراک‌ها</h1>
+          <p class="hero-subtitle">
+            اینجا وب‌سایت رسمی محمد متین میرزاپور است؛ از اشتراک‌های پلی‌استیشن، نتفلیکس و اسپاتیفای تا تلگرام پرمیوم،
+            نیترو دیسکورد و سرویس‌های حرفه‌ای شبکه‌های اجتماعی. هر سرویس با هماهنگی مستقیم و پشتیبانی شخصی ارائه می‌شود.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary hover-lift" type="button" onclick="goToSection('store')">
+              ورود به فروشگاه خدمات
+            </button>
+            <button class="btn-ghost hover-lift" type="button" onclick="goToSection('contact')">
+              ارتباط مستقیم با من
+            </button>
+          </div>
+          <div class="hero-tags">
+            <span class="hero-tag">🎮 پلی‌استیشن پلاس و بازی دیجیتال</span>
+            <span class="hero-tag">📨 تلگرام پرمیوم و سرویس‌ها</span>
+            <span class="hero-tag">🎧 اسپاتیفای و اشتراک موسیقی</span>
+            <span class="hero-tag">🎬 نتفلیکس و استریم</span>
+            <span class="hero-tag">💬 نیترو و بوست دیسکورد</span>
+          </div>
+        </div>
+
+        <aside class="hero-card hover-lift">
+          <div class="hero-avatar">
+            <div class="hero-avatar-inner">🎮</div>
+          </div>
+          <h2>محمد متین میرزاپور – دنیای دیجیتال و گیم</h2>
+          <p>
+            در کنار خدمات فنی، به طراحی گرافیک، تولید محتوا و مدیریت حرفه‌ای شبکه‌های اجتماعی هم می‌پردازم.
+            هدفم ترکیب خلاقیت با تکنولوژی و ارائه سرویس‌های شفاف و قابل اعتماد برای گیمرها و مخاطبان فضای مجازی است.
+          </p>
+          <ul class="hero-card-list">
+            <li><div class="dot"></div><span>فروش و فعال‌سازی انواع اشتراک‌ها و سرویس‌های دیجیتال.</span></li>
+            <li><div class="dot"></div><span>خدمات اختصاصی برای سرورها و گیمرهای حرفه‌ای.</span></li>
+            <li><div class="dot"></div><span>تمرکز روی شفافیت، پشتیبانی و تجربه کاربری خوب.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store -->
+  <section id="store" class="fade" data-section="store">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">فروشگاه محمد متین میرزاپور</div>
+        <h2 class="section-title">خدمات پلی‌استیشن، تلگرام پرمیوم و شبکه‌های اجتماعی</h2>
+        <p class="section-subtitle">
+          این قسمت یک نمونه ساختار فروشگاه است. قیمت‌ها بر اساس تومان تعریف شده و برای مشتریان خارج از ایران
+          امکان نمایش تقریبی به دلار نیز فراهم است. در نسخه متصل به بک‌اند، این سبد خرید به درگاه پرداخت و سیستم ثبت سفارش واقعی وصل می‌شود.
+        </p>
+      </div>
+
+      <div class="store-grid">
+        <!-- Products -->
+        <div class="fade">
+          <div class="customer-type">
+            <span class="customer-label">نوع مشتری:</span>
+            <button class="customer-btn active" data-customer="iran">داخل ایران (تومان)</button>
+            <button class="customer-btn" data-customer="intl">International (USD)</button>
+          </div>
+
+          <div class="product-filters">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="ps">پلی‌استیشن</button>
+            <button class="filter-btn" data-filter="telegram">تلگرام</button>
+            <button class="filter-btn" data-filter="netflix">نتفلیکس</button>
+            <button class="filter-btn" data-filter="spotify">اسپاتیفای</button>
+            <button class="filter-btn" data-filter="discord">دیسکورد</button>
+            <button class="filter-btn" data-filter="social">سوشال مدیا دیگر</button>
+          </div>
+
+          <div id="product-list" class="product-list">
+            <!-- با JS پر می‌شود -->
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <aside class="cart fade hover-lift">
+          <div class="cart-title">
+            <span>سبد خرید</span>
+            <span id="cart-count">۰ آیتم</span>
+          </div>
+          <div id="cart-items" class="cart-items">
+            <!-- آیتم‌های سبد خرید -->
+          </div>
+
+          <div class="cart-summary">
+            <div>مجموع سبد: <span id="cart-subtotal" class="cart-subtotal">۰</span></div>
+            <div id="cart-discount-line" class="cart-discount-line" style="display:none;">
+              تخفیف: <span id="cart-discount">۰</span>
+            </div>
+            <div>مبلغ پرداختی: <span id="cart-total" class="cart-total">۰</span></div>
+          </div>
+
+          <div class="form-group">
+            <label for="discount-code">کد تخفیف</label>
+            <div style="display:flex; gap:6px;">
+              <input id="discount-code" type="text" placeholder="مثال: MATIN10" />
+              <button class="btn-ghost btn-small" type="button" onclick="applyDiscount()">اعمال</button>
+            </div>
+            <div id="discount-message" class="muted"></div>
+            <div class="muted">
+              کدهای نمونه برای تست: <strong>MATIN10</strong> (۱۰٪ تخفیف)، <strong>MATIN20</strong> (۲۰٪ تخفیف)
+            </div>
+          </div>
+
+          <p class="cart-note">
+            این سبد خرید و کد تخفیف فعلاً نمایشی هستند. در نسخه نهایی، می‌توانند به درگاه پرداخت، سیستم مدیریت سفارش و
+            روش‌های پرداخت داخل و خارج از ایران (مثل درگاه، ارز دیجیتال و...) متصل شوند.
+          </p>
+          <button class="btn-primary btn-small" type="button"
+                  onclick="alert('در نسخه کامل، این دکمه شما را به صفحه ثبت سفارش/پرداخت هدایت می‌کند و نوع پرداخت (داخل/خارج) را مشخص می‌کند.')">
+            ادامه ثبت سفارش (نمونه)
+          </button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="fade" data-section="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">درباره من</div>
+        <h2 class="section-title">محمد متین میرزاپور</h2>
+        <p class="section-subtitle">
+          فعال و کارآفرین در دنیای دیجیتال؛ از گرافیک و تولید محتوا تا مدیریت سرورهای بازی، تحلیل رمز ارز و خدمات شبکه‌های اجتماعی.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card hover-lift">
+          <div class="card-title"><span class="icon">👤</span>معرفی کلی</div>
+          <div class="card-body">
+            من محمد متین میرزاپور هستم؛ در دنیای دیجیتال، گیم و رسانه فعالیت می‌کنم.  
+            در زمینه‌های گرافیک، آموزش و تحلیل رمز ارزها، مدیریت و خدمات پلتفرم‌های اجتماعی و مدیریت سرورهای بازی‌های
+            رایانه‌ای کار می‌کنم.  
+            به گرافیک، بازی‌های رایانه‌ای، موسیقی، سینما و تلویزیون علاقه‌مندم و همیشه در تلاش هستم خلاقیت را با
+            فناوری ترکیب کنم و مسیرهای تازه‌ای در فضای دیجیتال بسازم.
+          </div>
+        </div>
+
+        <div class="card hover-lift">
+          <div class="card-title"><span class="icon">📌</span>اطلاعات پایه و تحصیلی</div>
+          <div class="card-body">
+            <ul class="info-list">
+              <li><span class="info-label">نام کامل:</span> محمد متین میرزاپور</li>
+              <li><span class="info-label">تاریخ تولد:</span> ۱۹ مرداد ۱۳۸۶</li>
+              <li><span class="info-label">محل سکونت:</span> ایران – تهران</li>
+              <li><span class="info-label">تحصیلات:</span> دانشجو – رشته روابط عمومی</li>
+              <li><span class="info-label">محل تحصیل:</span> دانشگاه آزاد اسلامی واحد تهران مرکزی</li>
+              <li><span class="info-label">حوزه کاری:</span> فعال در حوزه دیجیتال و فضای مجازی</li>
+              <li><span class="info-label">نوع فعالیت:</span> Self-Employed / Freelancer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auth -->
+  <section id="auth" class="fade" data-section="auth">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">حساب کاربری</div>
+        <h2 class="section-title">ثبت‌نام / ورود کاربران (نمایشی)</h2>
+        <p class="section-subtitle">
+          این بخش ظاهر فرم ثبت‌نام با ایمیل یا شماره موبایل، ارسال کد یکبارمصرف و تعیین رمز عبور را نشان می‌دهد.
+          برای واقعی شدن این سیستم، باید به یک بک‌اند و سرویس ارسال ایمیل/پیامک متصل شود.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="auth hover-lift fade">
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-mode="email">ثبت‌نام با ایمیل</button>
+            <button class="auth-tab" data-mode="phone">ثبت‌نام با شماره موبایل</button>
+          </div>
+
+          <form id="auth-form" onsubmit="event.preventDefault(); fakeRegister();">
+            <div id="auth-email-group" class="form-group">
+              <label for="auth-email">ایمیل</label>
+              <input id="auth-email" type="email" placeholder="example@mail.com" />
+            </div>
+
+            <div id="auth-phone-group" class="form-group" style="display:none;">
+              <label for="auth-phone">شماره موبایل</label>
+              <input id="auth-phone" type="tel" placeholder="09xxxxxxxxx" />
+            </div>
+
+            <div class="form-group">
+              <label for="auth-otp">کد یکبارمصرف</label>
+              <div style="display:flex; gap:6px;">
+                <input id="auth-otp" type="text" placeholder="کدی که برای شما ارسال می‌شود" />
+                <button class="btn-ghost btn-small" type="button" onclick="sendFakeOtp()">ارسال کد</button>
+              </div>
+              <div class="muted">
+                در نسخه واقعی، این دکمه از طریق سرور، کد یکبارمصرف را به ایمیل یا شماره شما ارسال می‌کند. اینجا فقط پیام تستی نمایش داده می‌شود.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="auth-password">رمز عبور</label>
+              <input id="auth-password" type="password" placeholder="رمز عبور مورد نظر شما" />
+            </div>
+
+            <button class="btn-primary btn-small" type="submit">تکمیل ثبت‌نام (نمونه)</button>
+            <div id="auth-message" class="muted" style="margin-top:6px;"></div>
+          </form>
+        </div>
+
+        <div class="card hover-lift fade">
+          <div class="card-title"><span class="icon">ℹ️</span>توضیح فنی کوتاه</div>
+          <div class="card-body">
+            <p>برای واقعی شدن این سیستم ثبت‌نام، لازم است:</p>
+            <ul class="info-list" style="margin-top:6px;">
+              <li>• یک بک‌اند (مثل Node.js، PHP و...) برای دریافت و بررسی داده‌ها وجود داشته باشد.</li>
+              <li>• برای ارسال ایمیل از SMTP یا سرویس‌های ایمیلی استفاده شود.</li>
+              <li>• برای ارسال پیامک از درگاه‌های پیامکی داخل ایران استفاده شود.</li>
+              <li>• کد یکبارمصرف، ایمیل/شماره و رمز عبور (به‌صورت هش‌شده) در دیتابیس امن ذخیره گردد.</li>
+            </ul>
+            <p class="muted" style="margin-top:8px;">
+              این صفحه فعلاً فرانت‌اند و ظاهر را آماده کرده است تا هر زمان خواستی، بتوانی آن را به بک‌اند حرفه‌ای وصل کنی.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade" data-section="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">ارتباط</div>
+        <h2 class="section-title">راه‌های ارتباط با محمد متین میرزاپور</h2>
+        <p class="section-subtitle">
+          برای همکاری، سفارش خدمات دیجیتال یا هماهنگی در مورد سرویس‌ها، می‌توانید از طریق یکی از روش‌های زیر با من در ارتباط باشید.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="contact-box hover-lift fade">
+          <p><strong>وب‌سایت:</strong> <a href="https://matinmirzapour.ir">matinmirzapour.ir</a></p>
+          <p><strong>ایمیل:</strong> <a href="mailto:Mirzapour.matin199@gmail.com">Mirzapour.matin199@gmail.com</a></p>
+          <p><strong>تلفن:</strong> <a href="tel:09351991986">09351991986</a></p>
+          <p><strong>تلگرام (پی‌وی):</strong> <a href="https://t.me/MATINUTA" target="_blank">@MATINUTA</a></p>
+          <p><strong>اینستاگرام:</strong> <a href="https://instagram.com/Matin.mirzapour_" target="_blank">Matin.mirzapour_</a></p>
+          <p><strong>یوتیوب:</strong> <a href="https://youtube.com/@matin_uta?si=iBZnC0pasfT2BIII" target="_blank">کانال YouTube</a></p>
+          <p><strong>سرور دیسکورد:</strong> <a href="https://discord.gg/sQ7qfcHu" target="_blank">ورود به سرور دیسکورد</a></p>
+          <p><strong>آیدی دیسکورد:</strong> matinuta</p>
+
+          <div class="social-links">
+            <span class="social-pill"><a href="https://t.me/MATINUTA" target="_blank">Telegram</a></span>
+            <span class="social-pill"><a href="https://instagram.com/Matin.mirzapour_" target="_blank">Instagram</a></span>
+            <span class="social-pill"><a href="https://youtube.com/@matin_uta?si=iBZnC0pasfT2BIII" target="_blank">YouTube</a></span>
+            <span class="social-pill"><a href="https://discord.gg/sQ7qfcHu" target="_blank">Discord Server</a></span>
+          </div>
+
+          <p class="muted" style="margin-top:8px;">
+            برای مشتریان خارج از ایران، می‌توان روش پرداخت جدا (مثلاً ارز دیجیتال یا درگاه‌های بین‌المللی مجاز) را با هماهنگی در تلگرام یا دیسکورد تنظیم کرد.
+          </p>
+        </div>
+
+        <!-- فرم ایمیل ساده -->
+        <form class="hover-lift fade"
+              action="mailto:Mirzapour.matin199@gmail.com"
+              method="post"
+              enctype="text/plain">
+          <div class="form-group">
+            <label for="contact-name">نام</label>
+            <input id="contact-name" name="name" type="text" placeholder="نام شما" />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">ایمیل شما</label>
+            <input id="contact-email" name="email" type="email" placeholder="example@mail.com" />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">پیام</label>
+            <textarea id="contact-message" name="message" placeholder="موضوع همکاری یا پیام خود را بنویسید."></textarea>
+          </div>
+          <button class="btn-primary btn-small" type="submit">ارسال ایمیل (از طریق برنامه ایمیل شما)</button>
+          <div class="muted">
+            در نسخه حرفه‌ای متصل به سرور، این فرم پیام شما را مستقیماً در سیستم ثبت می‌کند یا برای شما ایمیل می‌کند.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © تمامی حقوق این وب‌سایت متعلق به محمد متین میرزاپور است – matinmirzapour.ir
+</footer>
+
+<script>
+  // --- منوی موبایل ---
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+
+    // بستن منو بعد از کلیک روی لینک در موبایل
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 720) {
+          navMenu.classList.remove("open");
+        }
+      });
+    });
+
+    // اطمینان از نمایش درست در دسکتاپ بعد از تغییر سایز
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 720) {
+        navMenu.classList.remove("open");
+      }
+    });
+  }
+
+  // --- منطق شبه SPA برای منو ---
+  const sections = document.querySelectorAll("[data-section]");
+  const navLinks = document.querySelectorAll("[data-nav]");
+
+  function showAllSections() {
+    sections.forEach(sec => {
+      if (sec.dataset.section === "hero" || sec.dataset.section === "store") {
+        sec.classList.remove("hidden");
+      } else {
+        sec.classList.add("hidden");
+      }
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveNav("home");
+  }
+
+  function showSingleSection(sectionName) {
+    sections.forEach(sec => {
+      if (sec.dataset.section === sectionName) {
+        sec.classList.remove("hidden");
+      } else {
+        sec.classList.add("hidden");
+      }
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveNav(sectionName);
+  }
+
+  function goToSection(sectionName) {
+    showSingleSection(sectionName);
+  }
+
+  function setActiveNav(target) {
+    navLinks.forEach(link => {
+      if (link.dataset && link.dataset.nav) {
+        link.classList.toggle("active", link.dataset.nav === target);
+      }
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const target = link.dataset.nav;
+      if (!target) return;
+      e.preventDefault();
+      if (target === "home") {
+        showAllSections();
+      } else {
+        showSingleSection(target);
+      }
+    });
+  });
+
+  // لوگو = بازگشت به خانه
+  document.querySelectorAll(".logo").forEach(el => {
+    el.addEventListener("click", () => showAllSections());
+  });
+
+  // --- قیمت داخل/خارج ---
+  let customerType = "iran"; // iran یا intl
+  const EXCHANGE_RATE = 60000; // هر ۱ دلار چند تومان - بعداً تنظیم کن
+
+  // --- محصولات نمونه ---
+  const products = [
+    { id: 1, name: "اشتراک پلی‌استیشن پلاس ۳ ماهه", category: "ps", description: "دسترسی به بازی آنلاین و بازی‌های ماهانه پلی‌استیشن.", price: 1200000 },
+    { id: 2, name: "اشتراک پلی‌استیشن پلاس ۱۲ ماهه", category: "ps", description: "صرفه‌جویی بیشتر و دسترسی کامل به امکانات پلی‌استیشن پلاس.", price: 3600000 },
+    { id: 3, name: "خرید بازی دیجیتال پلی‌استیشن (نمونه)", category: "ps", description: "نصب بازی دیجیتال روی اکانت شما (عنوان و قیمت قابل تنظیم).", price: 2300000 },
+    { id: 4, name: "تلگرام پرمیوم ۱ ماهه", category: "telegram", description: "فعال‌سازی تلگرام پرمیوم روی اکانت شخصی شما.", price: 350000 },
+    { id: 5, name: "تلگرام پرمیوم ۱۲ ماهه", category: "telegram", description: "اشتراک سالانه تلگرام پرمیوم، مناسب استفاده حرفه‌ای.", price: 3200000 },
+    { id: 6, name: "اشتراک نتفلیکس پروفایل ۱ ماهه", category: "netflix", description: "تماشای سریال و فیلم روی یک پروفایل اختصاصی.", price: 450000 },
+    { id: 7, name: "اشتراک نتفلیکس ۴ کاربره ۱ ماهه", category: "netflix", description: "مناسب خانواده یا استفاده مشترک با چند نفر.", price: 1100000 },
+    { id: 8, name: "اسپاتیفای پرمیوم ۱ ماهه", category: "spotify", description: "حذف تبلیغات و دسترسی کامل به آرشیو موسیقی.", price: 300000 },
+    { id: 9, name: "اسپاتیفای پرمیوم ۳ ماهه", category: "spotify", description: "سه ماه دسترسی پرمیوم با هزینه کمتر نسبت به ماهانه.", price: 800000 },
+    { id: 10, name: "نیترو دیسکورد ۱ ماهه", category: "discord", description: "فعال‌سازی Discord Nitro روی اکانت شما.", price: 380000 },
+    { id: 11, name: "بوست سرور دیسکورد (۱ بوست)", category: "discord", description: "افزایش سطح سرور و باز کردن امکانات بیشتر برای اعضا.", price: 250000 },
+    { id: 12, name: "خدمات اینستاگرام (پکیج رشد پیج)", category: "social", description: "بهینه‌سازی و رشد پیج اینستاگرام بر اساس نیاز شما.", price: 1500000 },
+    { id: 13, name: "خدمات یوتیوب (بهبود کانال / مشاوره)", category: "social", description: "تحلیل و مشاوره برای رشد و حرفه‌ای کردن کانال یوتیوب.", price: 1800000 }
+  ];
+
+  let currentFilter = "all";
+  let cart = [];
+  let currentDiscountPercent = 0;
+  let currentDiscountCode = null;
+
+  function formatPrice(num) {
+    if (customerType === "iran") {
+      return num.toLocaleString("fa-IR") + " تومان";
+    } else {
+      const usd = num / EXCHANGE_RATE;
+      return "$" + usd.toFixed(2);
+    }
+  }
+
+  function renderProducts() {
+    const list = document.getElementById("product-list");
+    if (!list) return;
+    list.innerHTML = "";
+    const filtered = products.filter(p => currentFilter === "all" || p.category === currentFilter);
+    filtered.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "product-card hover-lift fade";
+
+      let emoji = "✨";
+      if (p.category === "ps") emoji = "🎮";
+      else if (p.category === "telegram") emoji = "📨";
+      else if (p.category === "netflix") emoji = "🎬";
+      else if (p.category === "spotify") emoji = "🎧";
+      else if (p.category === "discord") emoji = "💬";
+      else if (p.category === "social") emoji = "📱";
+
+      div.innerHTML = `
+        <div class="product-thumb">${emoji}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-meta">${p.description}</div>
+        <div class="product-footer">
+          <div class="product-price">${formatPrice(p.price)}</div>
+          <button class="product-add" type="button" onclick="addToCart(${p.id})">افزودن</button>
+        </div>
+      `;
+      list.appendChild(div);
+    });
+  }
+
+  function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+    const existing = cart.find(item => item.id === id);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ id: product.id, name: product.name, price: product.price, qty: 1 });
+    }
+    renderCart();
+  }
+
+  function changeQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) {
+      cart = cart.filter(i => i.id !== id);
+    }
+    renderCart();
+  }
+
+  function renderCart() {
+    const container = document.getElementById("cart-items");
+    const subtotalEl = document.getElementById("cart-subtotal");
+    const totalEl = document.getElementById("cart-total");
+    const countEl = document.getElementById("cart-count");
+    const discountEl = document.getElementById("cart-discount");
+    const discountLine = document.getElementById("cart-discount-line");
+
+    if (!container || !subtotalEl || !totalEl || !countEl) return;
+
+    container.innerHTML = "";
+    if (cart.length === 0) {
+      container.innerHTML = "<div class='cart-note'>سبد خرید خالی است.</div>";
+      subtotalEl.textContent = formatPrice(0);
+      totalEl.textContent = formatPrice(0);
+      countEl.textContent = "۰ آیتم";
+      if (discountLine) discountLine.style.display = "none";
+      return;
+    }
+
+    let total = 0;
+    let count = 0;
+
+    cart.forEach(item => {
+      total += item.price * item.qty;
+      count += item.qty;
+      const row = document.createElement("div");
+      row.className = "cart-item";
+      row.innerHTML = `
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-controls">
+          <button class="cart-btn" type="button" onclick="changeQty(${item.id}, 1)">+</button>
+          <span>${item.qty}</span>
+          <button class="cart-btn" type="button" onclick="changeQty(${item.id}, -1)">−</button>
+        </div>
+      `;
+      container.appendChild(row);
+    });
+
+    const discountAmountBase = currentDiscountPercent > 0 ? Math.round(total * currentDiscountPercent / 100) : 0;
+    const payableBase = total - discountAmountBase;
+
+    subtotalEl.textContent = formatPrice(total);
+    totalEl.textContent = formatPrice(payableBase);
+    countEl.textContent = count.toLocaleString("fa-IR") + " آیتم";
+
+    if (discountLine && discountEl) {
+      if (discountAmountBase > 0) {
+        discountEl.textContent = formatPrice(discountAmountBase);
+        discountLine.style.display = "block";
+      } else {
+        discountLine.style.display = "none";
+      }
+    }
+  }
+
+  function applyDiscount() {
+    const input = document.getElementById("discount-code");
+    const msg = document.getElementById("discount-message");
+    if (!input || !msg) return;
+
+    const code = input.value.trim().toUpperCase();
+    if (!code) {
+      msg.textContent = "لطفاً کد تخفیف را وارد کنید.";
+      currentDiscountPercent = 0;
+      currentDiscountCode = null;
+      renderCart();
+      return;
+    }
+
+    const discountMap = {
+      "MATIN10": 10,
+      "MATIN20": 20
+    };
+
+    if (discountMap[code]) {
+      currentDiscountPercent = discountMap[code];
+      currentDiscountCode = code;
+      msg.textContent = "کد تخفیف اعمال شد: " + discountMap[code] + "٪";
+    } else {
+      currentDiscountPercent = 0;
+      currentDiscountCode = null;
+      msg.textContent = "کد تخفیف نامعتبر است.";
+    }
+
+    renderCart();
+  }
+
+  // Filter buttons
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      renderProducts();
+      document.querySelectorAll("#product-list .fade").forEach(el => el.classList.add("visible"));
+    });
+  });
+
+  // Customer type switch
+  document.querySelectorAll(".customer-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".customer-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      customerType = btn.dataset.customer === "intl" ? "intl" : "iran";
+      renderProducts();
+      renderCart();
+      document.querySelectorAll("#product-list .fade").forEach(el => el.classList.add("visible"));
+    });
+  });
+
+  // Auth tab switch
+  document.querySelectorAll(".auth-tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".auth-tab").forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      const mode = tab.dataset.mode;
+      const emailGroup = document.getElementById("auth-email-group");
+      const phoneGroup = document.getElementById("auth-phone-group");
+      if (mode === "email") {
+        emailGroup.style.display = "block";
+        phoneGroup.style.display = "none";
+      } else {
+        emailGroup.style.display = "none";
+        phoneGroup.style.display = "block";
+      }
+    });
+  });
+
+  function sendFakeOtp() {
+    const msg = document.getElementById("auth-message");
+    if (msg) {
+      msg.textContent = "در نسخه نهایی، کد یکبارمصرف از طریق سرور برای ایمیل یا شماره شما ارسال خواهد شد. (اینجا فقط برای تست است.)";
+    }
+  }
+
+  function fakeRegister() {
+    const msg = document.getElementById("auth-message");
+    if (msg) {
+      msg.textContent = "ثبت‌نام نمونه با موفقیت انجام شد. در نسخه اصلی، اطلاعات شما در سرور ذخیره خواهد شد.";
+    }
+  }
+
+  // وقتی صفحه کامل لود شد
+  window.addEventListener("load", function () {
+    showAllSections();
+    renderProducts();
+    renderCart();
+    document.querySelectorAll(".fade").forEach(function (el) {
+      el.classList.add("visible");
+    });
+  });
+</script>
+
+</body>
+</html>
